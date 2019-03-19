@@ -1,0 +1,15 @@
+db:
+    foodb:
+        password: postgres
+        url: jdbc:postgresql://localhost:5432/foodb
+        username: postgres
+    bardb:
+        password: postgres
+        url: jdbc:postgresql://localhost:5432/bardb
+        username: postgres
+logging:
+    file: ${user.home}/logs/foo-bar.log
+    level:
+        org:
+            springframework: INFO
+        root: INFO

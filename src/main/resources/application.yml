@@ -1,0 +1,25 @@
+db:
+    foodb:
+        driver: org.postgresql.Driver
+    bardb:
+        driver: org.postgresql.Driver
+
+spring:
+    batch:
+        initialize-schema: never
+    application:
+        name: properties-logger
+
+before:
+    properties-definition:
+        of: ${application.local-directory}
+
+server:
+    port: 8092
+    ssl:
+        enabled: true
+        key-password: ${pw}
+
+application:
+    local-directory: ${java.io.tmpdir}bla
+    foo-filePath: ${application.local-directory}/foo.csv
